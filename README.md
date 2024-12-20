@@ -1,80 +1,63 @@
-# GestionnaireDePoubellesIntelligentes
-Semester project in java programming class
-## Description du Projet
+# Selective Waste Sorting Management System
 
-Ce projet a pour objectif de développer un système de gestion de tri sélectif, impliquant des poubelles intelligentes, 
-des utilisateurs récompensés pour leur tri correct, et des partenariats avec des commerces pour un impact écologique positif.
+## Overview
+This project implements a waste management system that encourages selective sorting. The system aims to reward households and businesses for properly sorting their waste through a loyalty points mechanism. Points can be redeemed for discounts or gift cards at partner businesses.
 
----
+## Features
+- **Smart Bins**: Controlled-access bins equipped with sensors to measure the type and quantity of deposited waste.
+- **Loyalty Points System**: Rewards users for depositing the correct type of waste; penalizes for incorrect sorting.
+- **Partner Integration**: Collaboration with businesses to offer rewards and discounts.
 
-## Grandes Lignes du Projet
+## Technologies Used
+- **Java**: Core functionality, including simulation of features and GUI.
+- **OpenJDK and OpenJFX (Version 18)**: Build and test the graphical user interface.
 
-1. **Tri Sélectif Intégré :**
-   - Poubelles connectées pour séparer les déchets : verre, plastique, carton, métal.
-   - Accès contrôlé par des comptes utilisateur.
+## System Components
+1. **Households**: Users who deposit waste in smart bins and earn points.
+2. **Smart Bins**:
+   - Types: Green (glass), Yellow (packaging/plastics), Blue (paper), and Classic (unsorted).
+   - Features:
+     - Detect type and quantity of waste.
+     - Penalize incorrect sorting.
+     - Notify collection centers when full.
+3. **Collection Centers**: Manage bins, collect waste, and monitor sorting performance.
+4. **Partner Businesses**: Collaborate to provide discounts and incentives for users.
 
-2. **Récompenses Utilisateur :**
-   - Attribution de points pour le tri correct.
-   - Conversion des points en bons d'achat ou réductions.
+## Installation and Setup
+### Prerequisites
+- **Java Development Kit (JDK 18)**: Ensure OpenJDK 18 and OpenJFX 18 are installed.
 
-3. **Partenariats :**
-   - Collaboration avec des commerces pour échanger les points contre des bon d'achats ou réductions.
+### Steps to Run
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/smart-waste-management.git
+   ```
+2. Navigate to the project directory and ensure data files are placed appropriately.
+3. Compile and run the Java program:
+   ```bash
+   javac -d bin src/*.java
+   java -cp bin MainTest
+   ```
+4. For GUI:
+   ```bash
+   java -jar smart-waste-management.jar
+   ```
 
-4. **Analyse Statistique :**
-   - Suivi et prédiction des dépôts pour optimiser la gestion logistique.
+## Example Usage
+- **Loyalty Points**:
+  - Deposit 10kg of plastic waste → Earn 100 points.
+  - Incorrectly deposit glass in a plastic bin → Lose 50 points.
+- **Redeem Points**:
+  - 500 points = 5% discount on grocery items at partner stores.
 
----
+## Contribution
+We welcome contributions to improve the project:
+1. Fork the repository.
+2. Create a new branch for your feature.
+3. Submit a pull request with a detailed description.
 
-## Fonctionnalités des Classes
+## License
+This project is licensed under the MIT License.
 
-### Classes Principales
-
-1. **CentreDeTri**
-   - Gestion des poubelles et collecte des déchets.
-   - Génération de statistiques et rapports.
-   - Connaissance de la liste des dépots de chaque ménage 
-
-2. **PoubelleIntelligente**
-   - Identifie les utilisateurs.
-   - Mesure la quantité des déchets déposés et la qualité du tri.
-   - Notifie le centre lorsqu'elle est pleine.
-
-3. **Utilisateur**
-   - Possède un compte pour visualiser les points.
-   - Historique des dépôts disponibles.
-   - Historique des bons d'achats disponibles 
-   - Possibilité de convertir ses points en bons d'achats 
-
-4. **Commerce**
-   - Réalise un contrat avec le centre de tri.
-   - Propose des réductions aux utilisateurs.
-
-5. **Dechets**
-   - Catégorisation (plastique, verre, carton, métal).
-
-### Tests
-- Classes de test pour valider les fonctionnalités : **MainTest.java**.
-
----
-
-## Guide d'Utilisation
-
-Pré-requis au lancement du projet: instanciation d'un centre de tri et d'une application 
-
-Afin de lancer les tests, lancer la classe `Main.java`. 
-
-
-### Pré-requis
-- **Java 18** ou supérieur.
-
----
-
-## Licence
-
-Ce projet est sous licence [MIT](LICENSE).
-
----
-
-## Auteur
-
-**ANTOGNELLI Pauline**
+## Author
+ANTOGNELLI Pauline
